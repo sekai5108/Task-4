@@ -7,9 +7,10 @@ Rails.application.routes.draw do
 
   resources :users,only: [:show,:index,:edit,:update]
 
+  resources :books, only: [:new, :create, :index, :show, :destroy]
 
+  resources :favorites, onry: [:create, :destroy]
 
-
-  resources :books
+  resources :post_comments, only: [:create, :destroy]
 
 end
